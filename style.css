@@ -1,0 +1,125 @@
+.btn{
+    width: 300px;
+    height: 70px;
+    border-radius: 30px;
+    background-color: rgb(94, 15, 80);
+    border: 4px solid rgb(114, 19, 97);
+    font-size: 40px;
+    margin-top: 20px;
+    transition-duration: 0.5s;
+    box-shadow: 0 9px #363636;
+    color: rgb(204, 204, 204);
+}
+.btn:hover{
+    background-color:rgb(114, 19, 97);
+}
+.btn:active{
+    box-shadow: 0 5px #272727;
+    transform: translateY(4px);
+    transition-duration: 0.01s;
+}
+
+.slotMachine{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.slotItem{
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid rgb(54, 12, 66);
+}
+
+.game{
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.divbuttons { 
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.backgroundi{
+    background-image: url(images/jogodobicho.jpg);
+    background-size: contain;
+
+    /* cor preta semitransparente */
+    background-color: rgba(0, 0, 0, 0.97);
+
+    /* mistura a cor com a imagem */
+    background-blend-mode: darken; /* ou multiply */
+}
+
+.piechart{
+    width: 24%;
+}
+
+.barchart{
+    width: 50%;
+}
+
+.graphics{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 100px;
+}
+
+.headergame{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8); 
+    color: white;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1000; 
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
