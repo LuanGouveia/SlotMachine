@@ -13,9 +13,9 @@ let pieChart;
 function play(){
     btnPlay.disabled = true;
     
-    let firstCard = document.getElementById("idFirstImage")
-    let secondCard = document.getElementById("idSecondImage")
-    let thirdCard = document.getElementById("idThirdImage")
+    firstCard = document.getElementById("idFirstImage")
+    secondCard = document.getElementById("idSecondImage")
+    thirdCard = document.getElementById("idThirdImage")
 
     const cards = [firstCard, secondCard, thirdCard]
 
@@ -44,32 +44,33 @@ function play(){
         clearInterval(imageIntervals[cardIndex])
     }
 
-    setTimeout(() => stopCard(0), 3000); 
-    setTimeout(() => stopCard(1), 4000); 
+    setTimeout(() => stopCard(0), 1000); 
+    setTimeout(() => stopCard(1), 2000); 
     setTimeout(() => {
         stopCard(2);
-        btnPlay.disabled = false;
-    }, 5000);
 
-    if(cards[0].src == cards[1].src && cards[1].src == cards[2].src){
+        btnPlay.disabled = false;
+
+        if(cards[0].src == cards[1].src && cards[1].src == cards[2].src){
         document.getElementById("result").innerHTML = "Parabéns, você ganhou!" 
         win++
-    }else{
-        document.getElementById("result").innerHTML = "Poxa, você perdeu, tente novamente!" 
-        lost++
-    }
-    tries++
-    localStorage.setItem("tries", tries);
-    localStorage.setItem("win", win);
-    localStorage.setItem("lost", lost);
+        }else{
+            document.getElementById("result").innerHTML = "Poxa, você perdeu, tente novamente!" 
+            lost++
+        }
+        tries++
+        localStorage.setItem("tries", tries);
+        localStorage.setItem("win", win);
+        localStorage.setItem("lost", lost);
 
-    if (barChart && pieChart) {
-    barChart.data.datasets[0].data = [tries, lost, win];
-    barChart.update();
+        if (barChart && pieChart) {
+        barChart.data.datasets[0].data = [tries, lost, win];
+        barChart.update();
 
-    pieChart.data.datasets[0].data = [lost, win];
-    pieChart.update();
-    }
+        pieChart.data.datasets[0].data = [lost, win];
+        pieChart.update();
+        }
+    }, 3000);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
