@@ -33,8 +33,8 @@
 }
 
 .slotItem{
-    width: 400px;
-    height: 250px;
+    width: 320px;
+    height: 220px;
     border-radius: 20px;
     object-fit: cover;
     border: 2px solid #ffd700;
